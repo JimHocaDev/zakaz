@@ -511,6 +511,43 @@
 			display: block !important;
 			height: 100% !important;
 		}
+
+		.comment_div {
+			display: grid;
+			grid-template-columns: auto auto auto;
+			gap: 20px;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.single_comment {
+
+			gap: 5px;
+			align-items: flex-start;
+		}
+
+		.single_comment img {
+			width: 20px;
+			height: 20px;
+			margin-top: 15px;
+		}
+
+		.comment_box {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+		}
+
+		.comment_add {
+			border: 1px solid #f9b45c;
+			padding: 10px;
+		}
+
+		.comment_box input {
+			border: 1px solid #f9b45c !important;
+
+		}
 	</style>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
 	<link rel="stylesheet" href="/resources/demos/style.css" />
@@ -905,6 +942,34 @@
 											</div>
 										</div>
 									</div>
+
+									<div data-vc-full-width="true" data-vc-full-width-init="false"
+										class="vc_row wpb_row vc_row-fluid vc_custom_1482923511947 vc_row-has-fill">
+										<div
+											class="wpb_column vc_column_container vc_col-sm-12 sc_layouts_column_icons_position_left">
+											<div class="vc_column-inner">
+												<div class="wpb_wrapper">
+													<h2
+														class="sc_item_title sc_title_title sc_align_center sc_item_title_style_default">
+														Комментарии пользователей
+													</h2>
+													<div class="comment_div">
+
+													</div>
+													<div class="comment_box">
+														<form id="comment_form">
+															<input id="comment_input" type="text"
+																placeholder="your comment"></input>
+															<button class="comment_add" type="submit">Add
+																Comment</button>
+														</form>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
 									<div class="vc_row-full-width vc_clearfix"></div>
 
 									<div data-vc-full-width="true" data-vc-full-width-init="false"
@@ -4555,6 +4620,56 @@
 			var x = document.getElementsByTagName('script')[0];
 			x.parentNode.insertBefore(s, x);
 		})('https://widget.replain.cc/dist/client.js');
+	</script>
+	<script>
+		const comment_div = document.querySelector(".comment_div")
+		const renderData = (array, node) => {
+			// node.innerHTML = "";
+			array.forEach((comment) => {
+				comment_div.innerHTML += `
+				<div class="single_comment">
+															<img src="./images/user.png" alt="user">
+															<div class="comment_texts">
+																<h6>User ${comment.username}</h6>
+																<p>${comment.comment}</p>
+															</div>
+														</div>
+          `;
+			});
+		};
+		const getComments = async () => {
+			const res = await fetch("https://zakaz.onrender.com/comment");
+			const data = await res.json();
+			renderData(data.data, comment_div);
+		}
+		getComments()
+
+
+		const form = document.getElementById("comment_form");
+		const input = document.getElementById("comment_input");
+
+		form.addEventListener("submit", async (e) => {
+			e.preventDefault();
+			const data = {
+				"comment": input.value,
+			};
+
+			await fetch("https://zakaz.onrender.com/comment", {
+					method: 'POST', // Specify the request method
+					headers: {
+						'Content-Type': 'application/json', // Specify the content type as JSON
+					},
+					body: JSON.stringify(data), // Convert the data to JSON format
+				})
+				.then(response => response.json())
+				.then(result => {
+					if (result.message == "Comment created Successfully") {
+						window.alert("Your comment was created successfully")
+						getComments()
+					}
+				})
+				.catch(error => console.log('error', error));
+		});
 	</script>
 	<a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
 </body>
