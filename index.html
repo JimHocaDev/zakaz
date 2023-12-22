@@ -4665,7 +4665,7 @@
 				.then(result => {
 					if (result.message == "Comment created Successfully") {
 						window.alert("Your comment was created successfully")
-						getComments()
+						location.reload()
 					}
 				})
 				.catch(error => console.log('error', error));
