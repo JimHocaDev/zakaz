@@ -502,7 +502,7 @@
         }
 
         #accordion h3,
-        #accordion2 h3,
+        #accordion4 h3,
         #accordion3 h3 {
             padding: 16px 5px !important;
             font-size: 17px;
@@ -517,12 +517,26 @@
         .trx_addons_column-1_3 img {
             height: 400px !important;
         }
-        .desc_of_about{
+
+        .desc_of_about {
             text-align: center;
             padding: 10px 0;
             font-size: 17px;
         }
     </style>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Activate the first element of the accordion
+            $("#accordion4").accordion({
+                active: 0,
+                collapsible: true // Allows the active section to be collapsible
+            });
+        });
+    </script>
 </head>
 
 <body
@@ -567,12 +581,12 @@
 
                                                                     </li>
                                                                     <li id="menu-item-104"
-                                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-104 active_link">
+                                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-104 ">
                                                                         <a href="./about.html"><span>О нас</span></a>
 
                                                                     </li>
                                                                     <li id="menu-item-250"
-                                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-250">
+                                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-250 active_link">
                                                                         <a href="./foryou.html"><span>Для вас</span></a>
                                                                     </li>
 
@@ -618,12 +632,12 @@
                                 <a href="./index.html"><span>Главная</span></a>
                             </li>
                             <li id="menu_mobile-item-104"
-                                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-104 active_link">
+                                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-104 ">
                                 <a href="./about.html"><span>О нас</span></a>
 
                             </li>
                             <li id="menu_mobile-item-250"
-                                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-250">
+                                class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-250 active_link">
                                 <a href="./foryou.html"><span>Для вас</span></a>
                             </li>
 
@@ -651,14 +665,14 @@
                         <div class="sc_layouts_item">
                             <div class="sc_layouts_title">
                                 <div class="sc_layouts_title_title">
-                                    <h1 class="sc_layouts_title_caption">О нас
+                                    <h1 class="sc_layouts_title_caption">Для вас
                                     </h1>
                                 </div>
                                 <div class="sc_layouts_title_breadcrumbs">
                                     <div class="breadcrumbs"><a class="breadcrumbs_item home"
                                             href="./index.html">Главная</a><span
                                             class="breadcrumbs_delimiter"></span><span
-                                            class="breadcrumbs_item current">О нас</span></div>
+                                            class="breadcrumbs_item current">Для вас</span></div>
                                 </div>
                             </div>
                         </div>
@@ -675,99 +689,213 @@
                                         <div
                                             class="wpb_column vc_column_container vc_col-sm-12 sc_layouts_column_icons_position_left">
                                             <div class="vc_column-inner">
+                                                <h2>FAQ</h2>
                                                 <div class="wpb_wrapper">
-                                                    <div class="sc_services sc_services_default"
-                                                        data-slides-per-view="3" data-slides-min-width="200">
-                                                        <h2
-                                                            class="sc_item_title sc_services_title sc_align_default sc_item_title_style_default">
-                                                            Наша команда
-                                                        </h2>
-                                                        <p class="desc_of_about">Наша цель – сделать этот сайт максимально информативным</p>
-                                                        <div
-                                                            class="sc_services_columns sc_item_columns sc_item_columns_3 trx_addons_columns_wrap columns_padding_bottom">
-                                                            <div class="trx_addons_column-1_3">
-                                                                <div
-                                                                    class="sc_services_item with_content with_image sc_services_item_featured_top">
-                                                                    <div
-                                                                        class="post_featured with_thumb hover_dots sc_services_item_thumb">
-                                                                        <img width="555" height="367"
-                                                                            src="./images/card1.jpg"
-                                                                            class="attachment-hypnotherapy-thumb-med size-hypnotherapy-thumb-med wp-post-image"
-                                                                            alt="Reduce Stress" decoding="async" />
-                                                                        <div class="mask"></div>
-                                                                        <a aria-hidden="true"
-                                                                            class="icons"><span></span><span></span><span></span></a>
-                                                                    </div>
-                                                                    <div class="sc_services_item_info">
-                                                                        <div class="sc_services_item_header">
-                                                                            <h4 class="sc_services_item_title">
-                                                                                Олимова Азиза Кахрамоновна
-                                                                            </h4>
-                                                                        </div>
-                                                                        <div class="sc_services_item_content">
-                                                                            <a href="mailto:aziza_olimova98@mail.ru ">
-                                                                                aziza_olimova98@mail.ru
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="trx_addons_column-1_3">
-                                                                <div
-                                                                    class="sc_services_item with_content with_image sc_services_item_featured_top">
-                                                                    <div
-                                                                        class="post_featured with_thumb hover_dots sc_services_item_thumb">
-                                                                        <img width="555" height="367"
-                                                                            src="./images/card2.jpg"
-                                                                            class="attachment-hypnotherapy-thumb-med size-hypnotherapy-thumb-med wp-post-image"
-                                                                            alt="Lose Weight" decoding="async" />
-                                                                        <div class="mask"></div>
-                                                                        <a aria-hidden="true"
-                                                                            class="icons"><span></span><span></span><span></span></a>
-                                                                    </div>
-                                                                    <div class="sc_services_item_info">
-                                                                        <div class="sc_services_item_header">
-                                                                            <h4 class="sc_services_item_title">
-                                                                                Хошимова Гулсара Нигматовна
-                                                                            </h4>
-                                                                        </div>
-                                                                        <div class="sc_services_item_content">
-                                                                            <a
-                                                                                href="mailto:gulsaraxoshimova1@gmail.com ">
-                                                                                gulsaraxoshimova1@gmail.com
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="trx_addons_column-1_3">
-                                                                <div
-                                                                    class="sc_services_item with_content with_image sc_services_item_featured_top">
-                                                                    <div
-                                                                        class="post_featured with_thumb hover_dots sc_services_item_thumb">
-                                                                        <img width="555" height="500"
-                                                                            src="images/card3.jpg"
-                                                                            class="attachment-hypnotherapy-thumb-med size-hypnotherapy-thumb-med wp-post-image"
-                                                                            alt="Quit Smoking" decoding="async" />
-                                                                        <div class="mask"></div>
-                                                                        <a aria-hidden="true"
-                                                                            class="icons"><span></span><span></span><span></span></a>
-                                                                    </div>
-                                                                    <div class="sc_services_item_info">
-                                                                        <div class="sc_services_item_header">
-                                                                            <h4 class="sc_services_item_title">
-                                                                                Зайиркулова Нозима Ильясовна
-                                                                            </h4>
-                                                                        </div>
-                                                                        <div class="sc_services_item_content">
-                                                                            <a
-                                                                                href="mailto:nozimazayirkulova176@gmail.com ">
+                                                    <div id="accordion4">
+                                                        <h3>1. Что такое прокрастинация и почему она так распространена
+                                                            среди студентов? </h3>
+                                                        <div>
+                                                            <p>1. Прокрастинация - это навык откладывать или отклонять
+                                                                выполнение задач, которые требуют нашего внимания и
+                                                                усилий. Она распространена среди студентов по нескольким
+                                                                причинам. Во-первых, студенты часто сталкиваются с
+                                                                большим количеством заданий и дедлайнов, что может
+                                                                вызывать чувство стресса и тревоги. В таких случаях
+                                                                прокрастинация является попыткой справиться с этими
+                                                                эмоциями. Во-вторых, современные технологии, такие как
+                                                                социальные сети и онлайн-игры, предоставляют множество
+                                                                отвлекающих возможностей, которые могут легко запутать
+                                                                студентов и отвлечь их от работы. </p>
+                                                        </div>
+                                                        <h3>2. Какие последствия может иметь прокрастинация для
+                                                            студенческой успеваемости? </h3>
+                                                        <div>
+                                                            <p>2. Прокрастинация может иметь серьезные последствия для
+                                                                студенческой успеваемости. Откладывание выполнения
+                                                                заданий может привести к отсрочке сдачи работ или
+                                                                нехватке времени для их выполнения, что ведет к низким
+                                                                оценкам и плохим результатам. Постоянное прокрастинация
+                                                                также может привести к недостатку времени для изучения и
+                                                                подготовки к экзаменам, что отрицательно сказывается на
+                                                                возможности студента научиться и усвоить материал. В
+                                                                итоге, это может повлиять на профессиональное развитие и
+                                                                будущие возможности для студента. </p>
+                                                        </div>
+                                                        <h3>3.Как понять, что я страдаю от прокрастинации? </h3>
+                                                        <div>
+                                                            <p>3. Существуют несколько признаков, которые могут
+                                                                указывать на прокрастинацию. Если вы часто откладываете
+                                                                выполнение задач, находя множество отвлекающих
+                                                                комфортных занятий или если у вас возникает чувство
+                                                                беспокойства и вины из-за вашего бездействия, то это
+                                                                может быть признаком прокрастинации. Также, если вы
+                                                                часто сдаетесь перед тем, как задание вообще начнется,
+                                                                или постоянно испытываете потерю мотивации для работы,
+                                                                это могут быть также признаки прокрастинации.</p>
+                                                        </div>
+                                                        <h3>4. Как преодолеть бездействие и начать работать над
+                                                            заданиями? </h3>
+                                                        <div>
+                                                            <p>4. Преодоление бездействия и начало работы над заданиями
+                                                                может быть трудной задачей, но возможна. Вот несколько
+                                                                советов, которые могут помочь вам приступить к работе:
 
-                                                                                nozimazayirkulova176@gmail.com </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                                - Разделите большую задачу на более мелкие, управляемые
+                                                                подзадачи, чтобы сделать работу более осуществимой.
+
+                                                                - Установите конкретные и реалистичные цели и дедлайны
+                                                                для каждой подзадачи.
+
+                                                                - Создайте специальное место или окружение для работы,
+                                                                свободное от отвлечений.
+
+                                                                - Используйте метод Pomodoro или другие техники
+                                                                временного блокирования, чтобы сосредоточиться на задаче
+                                                                в течение определенного периода времени.
+
+                                                                - Найдите внутреннюю мотивацию, понимая значение работы
+                                                                и результат, которого вы добьетесь.
+
+                                                            </p>
+                                                        </div>
+                                                        <h3>5. Как составить эффективное расписание и управлять
+                                                            временем, чтобы избежать прокрастинации? </h3>
+                                                        <div>
+                                                            <p>5. Для составления эффективного расписания и управления
+                                                                временем важно учитывать следующие аспекты:
+
+                                                                - Продумайте свои цели и приоритеты, чтобы определить,
+                                                                на что следует сосредоточиться в первую очередь.
+
+                                                                - Разделите время на блоки и установите конкретные
+                                                                задачи на каждый блок.
+
+                                                                - Оставьте время для отдыха, релаксации и занятий хобби.
+
+                                                                - Избегайте перегрузки, стараясь не заполнять каждый
+                                                                свободный момент заданиями.
+
+                                                                - Используйте технологические инструменты, такие как
+                                                                приложения для управления временем, напоминания и
+                                                                планировщики, чтобы быть организованным и следовать
+                                                                своему расписанию. </p>
+                                                        </div>
+                                                        <h3>6. Как справиться с отвлекающими факторами, такими как
+                                                            социальные сети, игры или сериалы? </h3>
+                                                        <div>
+                                                            <p>
+
+                                                                6. Справиться с отвлекающими факторами может быть
+                                                                сложно, но возможно. Вот несколько стратегий, которые
+                                                                могут помочь вам справиться с отвлекающими факторами:
+
+                                                                - Установите временные ограничения для использования
+                                                                социальных сетей, игр или просмотра сериалов.
+
+                                                                - Используйте приложения или программы, которые
+                                                                блокируют доступ к отвлекающим веб-сайтам или
+                                                                приложениям в течение заданного времени.
+
+                                                                - Создайте окружение, свободное от отвлекающих
+                                                                элементов, путем удаления смартфонов или других
+                                                                отвлекающих предметов из пространства, где вы работаете.
+
+                                                                - Установите время для отдыха и развлечений, но
+                                                                придерживайтесь этого графика, чтобы не позволить этим
+                                                                деятельностям взять верх над вами. </p>
+                                                        </div>
+                                                        <h3>7. Как найти мотивацию и удержать ее на протяжении всего
+                                                            семестра?</h3>
+                                                        <div>
+                                                            <p>7. Найти мотивацию и сохранить ее на протяжении всего
+                                                                семестра может быть сложным, но возможным. Вот несколько
+                                                                способов увеличить мотивацию:
+
+                                                                - Установите ясные и конкретные цели и напоминайте себе
+                                                                о них.
+
+                                                                - Разделите свои цели на более мелкие, достижимые
+                                                                подзадачи и отмечайте их по мере продвижения.
+
+                                                                - Найдите внутреннюю мотивацию, понимая, каким образом
+                                                                ваше образование и успешное выполнение задач зависят от
+                                                                ваших действий.
+
+                                                                - Обратитесь к своим учителям, друзьям или семье за
+                                                                поддержкой и мотивацией. </p>
+                                                        </div>
+                                                        <h3>8. Как использовать техники самодисциплины для преодоления
+                                                            прокрастинации? </h3>
+                                                        <div>
+                                                            <p>8. Для использования техник самодисциплины и преодоления
+                                                                прокрастинации можно использовать следующие стратегии:
+
+                                                                - Создайте план и структурируйте свою работу, чтобы
+                                                                знать, что и когда нужно делать.
+
+                                                                - Предоставьте себе награды или поощрения после
+                                                                выполнения задач, чтобы усилить желание работать.
+
+                                                                - Используйте методы временного блокирования, такие как
+                                                                метод Pomodoro, чтобы сосредоточиться на задаче.
+
+                                                                - Избегайте слишком больших усилий. Найдите баланс между
+                                                                работой и отдыхом, чтобы избежать истощения и
+                                                                перегрузки.
+
+                                                                - Развивайте свои навыки планирования и организации,
+                                                                чтобы быть более эффективным и дисциплинированным.
+
+                                                            </p>
+                                                        </div>
+                                                        <h3>9. Как обратиться за помощью и поддержкой, если
+                                                            прокрастинация начинает влиять на мою психическое состояние
+                                                            или здоровье? </h3>
+                                                        <div>
+                                                            <p>9. Если прокрастинация начинает влиять на ваше
+                                                                психическое состояние или здоровье, важно обратиться за
+                                                                помощью и поддержкой. Вот несколько способов получить
+                                                                такую помощь:
+
+                                                                - Обратитесь к советнику или психологу в вашем учебном
+                                                                заведении. Они могут помочь вам разработать стратегии
+                                                                для преодоления прокрастинации и улучшения психического
+                                                                состояния.
+
+                                                                - Обсудите свои проблемы с друзьями, близкими или
+                                                                семьей. Иногда просто разговор с кем-то может помочь
+                                                                осознать проблему и найти решение.
+
+                                                                - Ищите онлайн-ресурсы, сообщества и форумы, где вы
+                                                                можете обсудить свои проблемы с другими студентами или
+                                                                получить экспертные советы.
+
+                                                            </p>
+                                                        </div>
+                                                        <h3>10. Как установить реалистичные цели и структурировать свою
+                                                            работу, чтобы избежать излишней нагрузки и стресса? </h3>
+                                                        <div>
+                                                            <p>10. Чтобы установить реалистичные цели и структурировать
+                                                                свою работу, следуйте следующим рекомендациям:
+
+                                                                - Определите свои главные цели и желаемые результаты.
+                                                                Поставьте перед собой конкретные и измеримые цели,
+                                                                которые мотивируют вас.
+
+                                                                - Разделите большие цели на более маленькие подзадачи
+                                                                или этапы. Определите, какие меры необходимо
+                                                                предпринять, чтобы достичь каждого этапа.
+
+                                                                - Задавайте реалистичные сроки и дедлайны для каждой
+                                                                подзадачи. Учитывайте свои силы и ресурсы.
+
+                                                                - Оставьте время для отдыха и релаксации, чтобы избежать
+                                                                перегрузки и выгорания.
+
+                                                                - Регулярно оценивайте свой прогресс и вносите изменения
+                                                                в свои цели и планы по мере необходимости. Будьте
+                                                                гибкими и адаптивными к изменяющейся ситуации и
+                                                                обстоятельствам. </p>
                                                         </div>
                                                     </div>
                                                 </div>
