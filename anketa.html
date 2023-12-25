@@ -1559,23 +1559,19 @@
         testme_area_form.addEventListener("submit", (evt) => {
             evt.preventDefault();
             const checkedRadioInputs = testme_area_form.querySelectorAll("input[type='radio']:checked");
+            let text = ""
 
-            checkedRadioInputs.forEach((radioInput) => {
+            checkedRadioInputs.forEach((radioInput, radioindex) => {
                 // Assuming the values are numeric, you may need to parse them if they are strings
                 const value = parseFloat(radioInput.value) || 0;
                 all_sum += value;
+                text += radioindex + 1 + ")" + radioInput.classList.value + "\n";
+                radioInput.checked = false;
             });
 
             const sendtelegram = function () {
-                let text = ""
                 const date = new Date()
                 let createdAt = date.getDate() + "." + date.getMonth() + "." + date.getFullYear()
-                checkedRadioInputs.forEach((radioInput, radioindex) => {
-                    // Assuming the values are numeric, you may need to parse them if they are strings
-                    const value = parseFloat(radioInput.value) || 0;
-                    text += radioindex + 1 + ")" + radioInput.classList.value + "\n";
-                    all_sum += value;
-                });
                 let message = `Ответы на опросник\n${text}\n${createdAt}`
 
                 var settings = {
